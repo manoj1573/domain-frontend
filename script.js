@@ -97,16 +97,20 @@ Array.from(availNowBtn).forEach(btn => btn.addEventListener('click',(e)=>{
 
 document.getElementById('rzp-button1').addEventListener("click",function(e){
     e.preventDefault();
+<<<<<<< HEAD
     
     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     let phoneRegex = /^(?:\d{10}|\w+@\w+\.\w{2,3})$/;
 
+=======
+>>>>>>> 82b668c9bbc15ae3d2469c6d3db6893fd484df18
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const address = document.getElementById("address").value;
     const bundleName = document.getElementById("bundle-name").value;
 
+<<<<<<< HEAD
     if(!name || !email || !phone || !address){
         alert("Fill Complete Details")
         return;
@@ -128,6 +132,13 @@ document.getElementById('rzp-button1').addEventListener("click",function(e){
         return;
     }
 
+=======
+    if(!name || !email || !phone || !address)
+        return;
+    
+    if(!bundleName)
+        return;
+>>>>>>> 82b668c9bbc15ae3d2469c6d3db6893fd484df18
     console.log(endDate < Date.now())
     buyPackage({name,email,phone,address,amount:99,bundleName,isTimeUp: endDate < Date.now() ? true : false});
 });
