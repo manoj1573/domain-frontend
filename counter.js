@@ -1,7 +1,7 @@
 import { setTimeUp, setSaleStatus, getSaleStatus } from './utils.js';
 
 const startDate = new Date("2024-12-23T8:00:00"); // 21 Dec 2024, 6:00 PM
-export const endDate = new Date("2024-12-23T10:00:00"); 
+export const endDate = new Date("2024-12-23T18:00:00"); 
 
 // Get the total duration in milliseconds
 // const duration = endDate - startDate;
