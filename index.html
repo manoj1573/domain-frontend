@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPER KIDS MEGA BUNDLE</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100VW;
+            height: auto;
+            font-family: 'Poppins', sans-serif;
+            background-color: #6300e4a6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        a{
+            all: unset;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+            /* height: 100%; */
+            padding: 5rem 0;
+        }
+        .main-heading {
+            /* margin: 0; */
+            padding: 1rem;
+            padding-bottom: 3rem;
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            /* color: #b700ff; */
+            animation: fadeInUp 0.8s ease-in-out;
+        }
+        .package-name-heading{
+            /* color: #06165c; */
+            color: white;
+            text-decoration: underline;
+            font-size: 2rem;
+        }
+        .bundle-section {
+            position: relative;
+            display: flex;
+            background: linear-gradient(135deg, #f6f7fb, #e9ecf1);
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            /* overflow: hidden; */
+            border-radius: 0.5rem;
+            width: 100%;
+            height: auto;
+            /* min-height: 40%; */
+            /* flex-wrap: wrap; */
+            animation: slideIn 1s ease-in-out;
+            position: relative;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .bundle-image {
+            width: 50%;
+            /* height: 100%; */
+            /* flex-grow: 1; */
+            overflow: hidden;
+            border-radius: 0.5rem;
+            border-top-right-radius: 0rem;
+            border-bottom-right-radius: 0rem;
+            background: url('assets/hero-img.jpeg') no-repeat center center/contain;
+        }
+        .bundle-details {
+            width: 50%;
+            /* height: 100%; */
+            flex-grow: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            background: #ffffff;
+            border-left: 0.1rem solid #ddd;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            border-top-left-radius: 0rem;
+            border-bottom-left-radius: 0rem;
+        }
+        .bundle-details div p {
+            font-size: 1rem;
+            line-height: 1.7rem;
+            color: #555;
+            animation: fadeInLeft 0.8s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(2rem);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInLeft {
+            0% {
+                transform: translateX(-2rem);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .offer-container{
+            padding: 1rem 0 1rem 0;
+        }
+
+        .countdown {
+            font-size: 1.2rem;
+            line-height: 1rem;
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            /* margin: 1rem 0; */
+        }
+        
+        .price {
+            font-size: 1.2rem;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .bundle-content{
+            padding-top: 1rem;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .bundle-content h3{
+            color: black;
+            font-size: 1.3rem;
+        }
+
+        .bundle-content p{
+            width: 100%; 
+            text-align: start;
+        }
+
+        .pay-now {
+            display: none;
+            padding: 1.5rem 0 0rem 0;
+            text-align: center;
+        }
+        .pay-now button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+        .pay-now button:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+        /* .bundle-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 123, 255, 0.1), transparent);
+            animation: rotateGlow 6s linear infinite;
+            pointer-events: none;
+            transform-origin: center;
+        } */
+        @keyframes rotateGlow {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+       
+        .star-price {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: black;
+            /* background: white; */
+            /* color: #6300e4a6; */
+            width: 10rem;
+            height: 6rem;
+            /* clip-path: polygon(50% 5%, 61% 35%, 93% 35%, 68% 57%, 79% 88%, 50% 70%, 21% 88%, 32% 57%, 7% 35%, 39% 35%); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+            border: 0.2rem solid #000;
+            border-radius: 100%;
+            z-index: 2;
+        }
+        .star-price.text-section {
+            position: absolute;
+            transform: rotate(20deg);
+            top: -10%;
+            right: -8%;
+        }
+        @media (max-width: 720px) {
+            .container{
+                width: 70%;
+            }
+            .star-price{
+                display: none;
+            }
+            .main-heading{
+                font-size: 1.3rem;
+                width: 100%;
+                /* padding: 1rem; */
+            }
+            .package-name-heading{
+                font-size: 1.3rem;
+                line-height: 2rem;
+            }
+            .bundle-section {
+                flex-direction: column;
+                height: auto;
+                /* width: 100%; */
+            }
+            .bundle-image {
+                width: 100%;
+                border-bottom-left-radius: 0rem;
+                /* min-height: 20%; */
+            }
+            .bundle-details {
+                width: 100%;
+                padding: 1rem;
+                border-top-left-radius: 0.5rem;
+                border-bottom-left-radius: 0.5rem;
+                /* padding: 1.5rem; */
+            }
+            .bundle-content p{
+                text-align: center
+            }
+            .countdown{
+                line-height: 2.5rem;
+            }
+            .price{
+                display: flex;
+            }
+        }
+        @media (max-width: 480px){
+            .main-heading{
+                font-size: 1.3rem;
+                width: 100%;
+                padding: 0 1.9rem 2rem 1.9rem;
+            }
+            .package-name-heading{
+                font-size: 1.3rem;
+                line-height: 2rem;
+            }
+            .container{
+                width: 85%;
+                /* height: 100%; */
+                padding: 3rem 0;
+            }
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">
+            <span class="package-name-heading">SUPER KIDS MEGA BUNDLE</span> by Maverick</h1>
+        <div class="bundle-section">
+            <div class="star-price text-section">
+                <p>Regular: <del>Rs. 399/-</del><br>Now: <strong>Rs. 99/-</strong></p>
+            </div>
+
+            <div class="bundle-image">
+                <img src="assets/hero-img.jpeg" style="
+                    width: 100%; height: 100%;
+                " alt="">
+            </div>
+            <div class="bundle-details">
+                <div class="offer-container">
+                    <div class="countdown" id="countdown">Offer Ends In: 24:00:00</div>
+                    <div class="price">
+                        <p style="color: rgb(6, 21, 109); font-weight: bold;"><del>Regular Price: Rs. 399/-</del></p>
+                        <p style="color: rgb(6, 21, 109); font-weight: bold;"><strong>Offer Price: Rs. 99/-</strong></p>    
+                    </div>
+                </div>
+                
+                <div class="bundle-content">
+                    <h3><strong>Whats in it ?</strong></h3>
+                    <p><strong>2000+ Pages</strong> Worksheets for 20 Learning Activities</p>
+                    <p><strong>1300+ Pages</strong> English Alphabet Worksheets</p>
+                    <p><strong>350+ Pages</strong> Hindi Master Worksheets</p>
+                    <p><strong>1000+ Pages</strong> Cut & Glue Activities</p>
+                    
+                    <div class="pay-now" bundle-name="Super Kids" amount="99">
+                        <button type="button" >
+                            <!-- Avail Now -->
+                            Avail Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="counter.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

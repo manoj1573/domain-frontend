@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .checkout-form {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        .checkout-form h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .checkout-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .checkout-form input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+        }
+        .checkout-form select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+        }
+        .checkout-form button {
+            width: 100%;
+            background: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .checkout-form button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+    <body>
+        <form class="checkout-form">
+            <h2>Checkout</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone No</label>
+            <input type="text" id="phone" name="phone" placeholder="0123456789" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+            <label for="bundle-name">Bundle</label>
+            <select name="bundle-name" id="bundle-name">
+                <option value="">Select Bundle Name</option>
+                <option value="Super Kids">Super Kids</option>
+            </select>
+            <!-- <input type="text" id="address" name="address" placeholder="Enter your address" required> -->
+
+            <button id="rzp-button1" type="submit">Pay</button>
+        </form>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script> -->
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
