@@ -104,10 +104,10 @@ document.getElementById('rzp-button1').addEventListener("click",function(e){
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
-    const address = document.getElementById("address").value;
+    // const address = document.getElementById("address").value;
     const bundleName = document.getElementById("bundle-name").value;
 
-    if(!name || !email || !phone || !address){
+    if(!name || !email || !phone){
         alert("Fill Complete Details")
         return;
     }
@@ -129,5 +129,5 @@ document.getElementById('rzp-button1').addEventListener("click",function(e){
     }
 
     console.log(endDate < Date.now())
-    buyPackage({name,email,phone,address,amount:99,bundleName,isTimeUp: endDate < Date.now() ? true : false});
+    buyPackage({name,email,phone,amount:99,bundleName,isTimeUp: endDate < Date.now() ? true : false});
 });
