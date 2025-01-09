@@ -19,7 +19,7 @@ const buyPackage = (user_details) => {
                 currency: orderResponse.data.data.currency,
                 amount: orderResponse.data.data.amount,
                 order_id: orderResponse.data.data.id,
-                name: "Maverick",
+                name: "99bookpro",
                 // image: rzpLogo,
                 prefill:{
                     name: user_details.name,
